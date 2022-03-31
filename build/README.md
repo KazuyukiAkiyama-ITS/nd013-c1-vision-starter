@@ -22,7 +22,12 @@ and any other flag you find useful to your system (eg, `--shm-size`).
 
 ## Set up
 
-Once in container, you will need to auth using:
+Once in container, you will need to install gsutil, which you can easily do by running:
+```
+curl https://sdk.cloud.google.com | bash
+```
+
+Once gsutil is installed and added to your path, you can auth using:
 ```
 gcloud auth login
 ```
