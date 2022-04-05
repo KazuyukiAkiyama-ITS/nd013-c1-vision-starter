@@ -98,16 +98,16 @@ We extracted 500 images and counted vehicles,pedestrians,and bicycles.
 From the left of the graph,vehicles,pedestrians and bicycles.
 The majority of objects in the dataset are vehicles and pedestrians, while fewer bicycles are detected.
 
-\figure\download1.png
-\figure\download2.png
-\figure\download3.png
-\figure\download4.png
-\figure\download5.png
-\figure\download6.png
-\figure\download7.png
-\figure\download8.png
-\figure\download9.png
-\figure\download10.png
+![r_Image1](/figure/download1.png)
+![r_Image2](/figure/download2.png)
+![r_Image3](/figure/download3.png)
+![r_Image4](/figure/download4.png)
+![r_Image5](/figure/download5.png)
+![r_Image6](/figure/download6.png)
+![r_Image7](/figure/download7.png)
+![r_Image8](/figure/download8.png)
+![r_Image9](/figure/download9.png)
+![r_Image10](/figure/download10.png)
 
 
 The captured images are from daytime busy city streets, expressways, uphill roads, and foggy weather. 
@@ -136,23 +136,17 @@ The purpose of cross validation is model generalization and alleviatation the o
 The test data is different from training and validation data.
 
 ### Training
-#### Reference experiment
-Each model is in this folder "\\experiments\experiments*\reference\exported".    
-
-Each gif animation is the file "\\experiments\experiments*\reference\animation.gif".  
-
-
 #### reference
 
 experiments0
-- folder: \report\experiments0
+- folder: /report/experiments0
 - base model: ssd_resnet50_v1_fpn_640x640_coco17_tpu-8  
-- pipeline: [pipeline_new.config](\report\experiments0\pipeline_new.config)    
+- pipeline: [pipeline_new.config](/report/experiments0/pipeline_new.config)    
 
 Result
-![r_Loss](\report\experiments0\tensorboad\Loss.PNG)
-![r_Precision](\report\experiments0\tensorboard\DetectionBoxes_Precision.PNG)
-![r_Recall](\report\experiments0\tensorboard\DetectionBoxes_Recall.PNG)
+![r_Loss](/report/experiments0/tensorboad/Loss.PNG)
+![r_Precision](/report/experiments0/tensorboard/DetectionBoxes_Precision.PNG)
+![r_Recall](/report/experiments0/tensorboard/DetectionBoxes_Recall.PNG)
 
 The Loss graphs are gradually decreasing as learning progresses.  
 In the case that the model have learned well, the loss of validation is expected to be lower than the loss of training.
@@ -165,9 +159,9 @@ I compared this reference model and the following experiment1/2/3 model. The res
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
 #### experiment1
-- folder: \report\experiments1
+- folder: /report/experiments1
 - base model: ssd_resnet50_v1_fpn_640x640_coco17_tpu-8  
-- pipeline: [pipeline_new.config](\report\experiments1\pipeline_new.config)    
+- pipeline: [pipeline_new.config](/report/experiments1/pipeline_new.config)    
 
   I add 3 data_augmentation_options on the reference pipeline.  
   1. random_adjust_brightness
@@ -176,25 +170,25 @@ This section should highlight the different strategies you adopted to improve yo
 
 
 Result
-![r_Loss](\report\experiments1\tensorboad\Loss.PNG)
-![r_Precision](\report\experiments1\tensorboard\DetectionBoxes_Precision.PNG)
-![r_Recall](\report\experiments1\tensorboard\DetectionBoxes_Recall.PNG)
+![r_Loss](/report/experiments1/tensorboad/Loss.PNG)
+![r_Precision](/report/experiments1/tensorboard/DetectionBoxes_Precision.PNG)
+![r_Recall](/report/experiments1/tensorboard/DetectionBoxes_Recall.PNG)
 
 In this learning, the loss has hardly decreased and has converged to a very high value.
 Therefore learning is not good. 
 
 
 #### experiment2
-- folder: \report\experiments2
+- folder: /report/experiments2
 - base model: ssd_resnet50_v1_fpn_640x640_coco17_tpu-8  
-- pipeline: [pipeline_new.config](\report\experiments2\pipeline_new.config)    
+- pipeline: [pipeline_new.config](/report/experiments2/pipeline_new.config)    
 
   I change the following steps of training_config.  
   total_steps: 5000  
   num_steps: 5000
 
 Result
-![r_Loss](\report\experiments2\tensorboad\Loss.PNG)
+![r_Loss](/report/experiments2/tensorboad/Loss.PNG)
 
 This training output is too large.  
 I have reached the storage limit of 3GB.  
@@ -202,16 +196,16 @@ I have reached the storage limit of 3GB.
 
 
 #### experiment3
-- folder: \report\experiments3
+- folder: /report/experiments3
 - base model: ssd_resnet152_v1_fpn_640x640_coco17_tpu-8  
-- pipeline: [pipeline_new.config](\report\experiments3\pipeline_new.config)    
+- pipeline: [pipeline_new.config](/report/experiments3/pipeline_new.config)    
 
 I changed the base model.
 
 Result
-![r_Loss](\report\experiments3\tensorboad\Loss.PNG)
-![r_Precision](\report\experiments3\tensorboard\DetectionBoxes_Precision.PNG)
-![r_Recall](\report\experiments3\tensorboard\DetectionBoxes_Recall.PNG)
+![r_Loss](/report/experiments3/tensorboad/Loss.PNG)
+![r_Precision](/report/experiments3/tensorboard/DetectionBoxes_Precision.PNG)
+![r_Recall](/report/experiments3/tensorboard/DetectionBoxes_Recall.PNG)
 
 The Loss is not lower than reference.Therefore,learning is not as good as reference.
 
