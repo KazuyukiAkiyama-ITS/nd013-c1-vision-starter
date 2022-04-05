@@ -92,7 +92,7 @@ Dataset analysis is written in the following file.
 [Exploratory Data Analysis.ipynb]
 
 
-![r_Analysis](.\figure\Analysis.png)
+[r_Analysis](\figure\Analysis.png)
 
 We extracted 500 images and counted vehicles,pedestrians,and bicycles.
 From the left of the graph,vehicles,pedestrians and bicycles.
