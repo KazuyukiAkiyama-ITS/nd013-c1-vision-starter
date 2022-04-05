@@ -91,22 +91,23 @@ python inference_video.py --labelmap_path label_map.pbtxt --model_path experimen
 Dataset analysis is written in the following file.  
 [Exploratory Data Analysis.ipynb]
 
--images: \\figure\Analysis.png
+
+![r_Analysis](.\figure\Analysis.png)
 
 We extracted 500 images and counted vehicles,pedestrians,and bicycles.
 From the left of the graph,vehicles,pedestrians and bicycles.
 The majority of objects in the dataset are vehicles and pedestrians, while fewer bicycles are detected.
 
-![r_Image1](figure\download1.png)
-![r_Image2](figure\download2.png)
-![r_Image3](figure\download3.png)
-![r_Image4](figure\download4.png)
-![r_Image5](figure\download5.png)
-![r_Image6](figure\download6.png)
-![r_Image7](figure\download7.png)
-![r_Image8](figure\download8.png)
-![r_Image9](figure\download9.png)
-![r_Image10](figure\download10.png)
+![r_Image1](.\figure\download1.png)
+![r_Image2](.\figure\download2.png)
+![r_Image3](.\figure\download3.png)
+![r_Image4](.\figure\download4.png)
+![r_Image5](.\figure\download5.png)
+![r_Image6](.\figure\download6.png)
+![r_Image7](.\figure\download7.png)
+![r_Image8](.\figure\download8.png)
+![r_Image9](.\figure\download9.png)
+![r_Image10](.\figure\download10.png)
 
 The captured images are from daytime busy city streets, expressways, uphill roads, and foggy weather. 
 The cars are drawn with red anchor boxes while pedestrians in blue and bicycles in green. 
