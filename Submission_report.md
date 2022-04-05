@@ -144,9 +144,9 @@ experiments0
 - pipeline: [pipeline_new.config](/report/experiments0/pipeline_new.config)    
 
 Result
-![r_Loss](/report/experiments0/tensorboad/Loss.PNG)
-![r_Precision](/report/experiments0/tensorboard/DetectionBoxes_Precision.PNG)
-![r_Recall](/report/experiments0/tensorboard/DetectionBoxes_Recall.PNG)
+![r_Loss](/report/experiments0/tensorboard/Loss.png)
+![r_Precision](/report/experiments0/tensorboard/DetectionBoxes_Precision.png)
+![r_Recall](/report/experiments0/tensorboard/DetectionBoxes_Recall.png)
 
 The Loss graphs are gradually decreasing as learning progresses.  
 In the case that the model have learned well, the loss of validation is expected to be lower than the loss of training.
@@ -170,9 +170,9 @@ This section should highlight the different strategies you adopted to improve yo
 
 
 Result
-![r_Loss](/report/experiments1/tensorboad/Loss.PNG)
-![r_Precision](/report/experiments1/tensorboard/DetectionBoxes_Precision.PNG)
-![r_Recall](/report/experiments1/tensorboard/DetectionBoxes_Recall.PNG)
+![r_Loss](/report/experiments1/tensorboard/Loss.png)
+![r_Precision](/report/experiments1/tensorboard/DetectionBoxes_Precision.png)
+![r_Recall](/report/experiments1/tensorboard/DetectionBoxes_Recall.png)
 
 In this learning, the loss has hardly decreased and has converged to a very high value.
 Therefore learning is not good. 
@@ -188,7 +188,7 @@ Therefore learning is not good.
   num_steps: 5000
 
 Result
-![r_Loss](/report/experiments2/tensorboad/Loss.PNG)
+![r_Loss](/report/experiments2/tensorboard/Loss.png)
 
 This training output is too large.  
 I have reached the storage limit of 3GB.  
@@ -203,9 +203,9 @@ I have reached the storage limit of 3GB.
 I changed the base model.
 
 Result
-![r_Loss](/report/experiments3/tensorboad/Loss.PNG)
-![r_Precision](/report/experiments3/tensorboard/DetectionBoxes_Precision.PNG)
-![r_Recall](/report/experiments3/tensorboard/DetectionBoxes_Recall.PNG)
+![r_Loss](/report/experiments3/tensorboard/Loss.png)
+![r_Precision](/report/experiments3/tensorboard/DetectionBoxes_Precision.png)
+![r_Recall](/report/experiments3/tensorboard/DetectionBoxes_Recall.png)
 
 The Loss is not lower than reference.Therefore,learning is not as good as reference.
 
