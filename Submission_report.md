@@ -138,17 +138,6 @@ The test data is different from training and validation data.
 ### Training
 #### reference
 
-animation gif
-
-  Animation gif is divided and stored in the following folders. 
-  [experiments0](/report/experiments0) 
-  [experiments1](/report/experiments1) 
-  [experiments3](/report/experiments3) 
-
-  experiments2 has not been created due to interruption..
-
-  Download MERGE.BAT and animation.***. Store it in one folder.
-  Double-click the MERGE.BAT to combine the split files.
 
 experiments0
 - folder: /report/experiments0
@@ -397,7 +386,7 @@ Result
 ![r_Precision](/report/experiments3/tensorboard/DetectionBoxes_Precision.png)
 ![r_Recall](/report/experiments3/tensorboard/DetectionBoxes_Recall.png)
 
-The Loss is not lower than reference.Therefore,learning is not as good as reference.
+
 
 
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
@@ -457,3 +446,6 @@ Loss/classification_loss: 1.078339
 Loss/regularization_loss: 6.681696
 
 Loss/total_loss: 8.696609
+
+The Loss is not lower than reference.Therefore,learning is not as good as reference.
+
