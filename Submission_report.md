@@ -244,33 +244,61 @@ Result
 ![r_Recall](/report/experiments1/tensorboard/DetectionBoxes_Recall.png)
 
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.001
+
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.001
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.004
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.001
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.002
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.013
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.012
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.008
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.062
+
 Eval metrics at step 2500
+
 DetectionBoxes_Precision/mAP: 0.000232
+
 DetectionBoxes_Precision/mAP@.50IOU: 0.001113
+
 DetectionBoxes_Precision/mAP@.75IOU: 0.000028
+
 DetectionBoxes_Precision/mAP (small): 0.000902
+
 DetectionBoxes_Precision/mAP (medium): 0.003909
+
 DetectionBoxes_Precision/mAP (large): 0.001032
+
 DetectionBoxes_Recall/AR@1: 0.000262
+
 DetectionBoxes_Recall/AR@10: 0.002175
+
 DetectionBoxes_Recall/AR@100: 0.012917
+
 DetectionBoxes_Recall/AR@100 (small): 0.011522
+
 DetectionBoxes_Recall/AR@100 (medium): 0.008003
+
 DetectionBoxes_Recall/AR@100 (large): 0.062043
+
 Loss/localization_loss: 0.887194
+
 Loss/classification_loss: 0.736561
+
 Loss/regularization_loss: 2.946652
+
 Loss/total_loss: 4.570406
 
 In this learning, the loss has hardly decreased and has converged to a very high value.
@@ -291,33 +319,61 @@ Result
 ![r_Loss](/report/experiments2/tensorboard/Loss.png)
 
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.001
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.001
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.005
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.001
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.116
+
 Eval metrics at step 4000
+
 DetectionBoxes_Precision/mAP: 0.000049
+
 DetectionBoxes_Precision/mAP@.50IOU: 0.000171
+
 DetectionBoxes_Precision/mAP@.75IOU: 0.000018
+
 DetectionBoxes_Precision/mAP (small): 0.000000
+
 DetectionBoxes_Precision/mAP (medium): 0.000085
+
 DetectionBoxes_Precision/mAP (large): 0.000892
+
 DetectionBoxes_Recall/AR@1: 0.000012
+
 DetectionBoxes_Recall/AR@10: 0.000912
+
 DetectionBoxes_Recall/AR@100: 0.004987
+
 DetectionBoxes_Recall/AR@100 (small): 0.000000
+
 DetectionBoxes_Recall/AR@100 (medium): 0.001139
+
 DetectionBoxes_Recall/AR@100 (large): 0.116311
+
 Loss/localization_loss: 0.759206
+
 Loss/classification_loss: 0.943312
+
 Loss/regularization_loss: 2.135895
+
 Loss/total_loss: 3.838413
 
 This training output is too large.  
@@ -345,31 +401,59 @@ The Loss is not lower than reference.Therefore,learning is not as good as refere
 
 
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.001
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.004
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.091
+
 Eval metrics at step 1000
+
 DetectionBoxes_Precision/mAP: 0.000034
+
 DetectionBoxes_Precision/mAP@.50IOU: 0.000117
+
 DetectionBoxes_Precision/mAP@.75IOU: 0.000007
+
 DetectionBoxes_Precision/mAP (small): 0.000000
+
 DetectionBoxes_Precision/mAP (medium): 0.000000
+
 DetectionBoxes_Precision/mAP (large): 0.000530
+
 DetectionBoxes_Recall/AR@1: 0.000000
+
 DetectionBoxes_Recall/AR@10: 0.000256
+
 DetectionBoxes_Recall/AR@100: 0.003731
+
 DetectionBoxes_Recall/AR@100 (small): 0.000000
+
 DetectionBoxes_Recall/AR@100 (medium): 0.000033
+
 DetectionBoxes_Recall/AR@100 (large): 0.090854
+
 Loss/localization_loss: 0.936573
+
 Loss/classification_loss: 1.078339
+
 Loss/regularization_loss: 6.681696
+
 Loss/total_loss: 8.696609
