@@ -165,33 +165,61 @@ In the case that the model have learned well, the loss of validation is expected
 And, the precision and recall are expected be large value than shown in this above graph and the below metrics.  
 
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.001
+
  Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.002
+
  Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+
  Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.004
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.001
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.008
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.029
+
  Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.067
+
 Eval metrics at step 2500
+
 DetectionBoxes_Precision/mAP: 0.000508
+
 DetectionBoxes_Precision/mAP@.50IOU: 0.001660
+
 DetectionBoxes_Precision/mAP@.75IOU: 0.000190
+
 DetectionBoxes_Precision/mAP (small): 0.000495
+
 DetectionBoxes_Precision/mAP (medium): 0.000248
+
 DetectionBoxes_Precision/mAP (large): 0.003614
+
 DetectionBoxes_Recall/AR@1: 0.000475
+
 DetectionBoxes_Recall/AR@10: 0.000831
+
 DetectionBoxes_Recall/AR@100: 0.008355
+
 DetectionBoxes_Recall/AR@100 (small): 0.000155
+
 DetectionBoxes_Recall/AR@100 (medium): 0.028660
+
 DetectionBoxes_Recall/AR@100 (large): 0.066616
+
 Loss/localization_loss: 0.871702
+
 Loss/classification_loss: 0.868469
+
 Loss/regularization_loss: 1.851852
+
 Loss/total_loss: 3.592023
 
 I compared this reference model and the following experiment1/2/3 model. The result is written the below.
