@@ -138,6 +138,18 @@ The test data is different from training and validation data.
 ### Training
 #### reference
 
+animation gif
+
+  Animation gif is divided and stored in the following folders. 
+  [experiments0](/report/experiments0) 
+  [experiments1](/report/experiments1) 
+  [experiments3](/report/experiments3) 
+
+  experiments2 has not been created due to interruption..
+
+  Download MERGE.BAT and animation.***. Store it in one folder.
+  Double-click the MERGE.BAT to combine the split files.
+
 experiments0
 - folder: /report/experiments0
 - base model: ssd_resnet50_v1_fpn_640x640_coco17_tpu-8  
@@ -152,6 +164,35 @@ The Loss graphs are gradually decreasing as learning progresses.
 In the case that the model have learned well, the loss of validation is expected to be lower than the loss of training.
 And, the precision and recall are expected be large value than shown in this above graph and the below metrics.  
 
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.001
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.002
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.004
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.001
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.008
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.029
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.067
+Eval metrics at step 2500
+DetectionBoxes_Precision/mAP: 0.000508
+DetectionBoxes_Precision/mAP@.50IOU: 0.001660
+DetectionBoxes_Precision/mAP@.75IOU: 0.000190
+DetectionBoxes_Precision/mAP (small): 0.000495
+DetectionBoxes_Precision/mAP (medium): 0.000248
+DetectionBoxes_Precision/mAP (large): 0.003614
+DetectionBoxes_Recall/AR@1: 0.000475
+DetectionBoxes_Recall/AR@10: 0.000831
+DetectionBoxes_Recall/AR@100: 0.008355
+DetectionBoxes_Recall/AR@100 (small): 0.000155
+DetectionBoxes_Recall/AR@100 (medium): 0.028660
+DetectionBoxes_Recall/AR@100 (large): 0.066616
+Loss/localization_loss: 0.871702
+Loss/classification_loss: 0.868469
+Loss/regularization_loss: 1.851852
+Loss/total_loss: 3.592023
 
 I compared this reference model and the following experiment1/2/3 model. The result is written the below.
 
@@ -170,12 +211,43 @@ This section should highlight the different strategies you adopted to improve yo
 
 
 Result
-![r_Loss](/report/experiments1/tensorboard/Loss.png)
+![r_Loss](/report/experiments1/tensorboard/loss.png)
 ![r_Precision](/report/experiments1/tensorboard/DetectionBoxes_Precision.png)
 ![r_Recall](/report/experiments1/tensorboard/DetectionBoxes_Recall.png)
 
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.001
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.001
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.004
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.001
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.002
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.013
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.012
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.008
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.062
+Eval metrics at step 2500
+DetectionBoxes_Precision/mAP: 0.000232
+DetectionBoxes_Precision/mAP@.50IOU: 0.001113
+DetectionBoxes_Precision/mAP@.75IOU: 0.000028
+DetectionBoxes_Precision/mAP (small): 0.000902
+DetectionBoxes_Precision/mAP (medium): 0.003909
+DetectionBoxes_Precision/mAP (large): 0.001032
+DetectionBoxes_Recall/AR@1: 0.000262
+DetectionBoxes_Recall/AR@10: 0.002175
+DetectionBoxes_Recall/AR@100: 0.012917
+DetectionBoxes_Recall/AR@100 (small): 0.011522
+DetectionBoxes_Recall/AR@100 (medium): 0.008003
+DetectionBoxes_Recall/AR@100 (large): 0.062043
+Loss/localization_loss: 0.887194
+Loss/classification_loss: 0.736561
+Loss/regularization_loss: 2.946652
+Loss/total_loss: 4.570406
+
 In this learning, the loss has hardly decreased and has converged to a very high value.
 Therefore learning is not good. 
+
 
 
 #### experiment2
@@ -190,6 +262,36 @@ Therefore learning is not good.
 Result
 ![r_Loss](/report/experiments2/tensorboard/Loss.png)
 
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.001
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.001
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.005
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.001
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.116
+Eval metrics at step 4000
+DetectionBoxes_Precision/mAP: 0.000049
+DetectionBoxes_Precision/mAP@.50IOU: 0.000171
+DetectionBoxes_Precision/mAP@.75IOU: 0.000018
+DetectionBoxes_Precision/mAP (small): 0.000000
+DetectionBoxes_Precision/mAP (medium): 0.000085
+DetectionBoxes_Precision/mAP (large): 0.000892
+DetectionBoxes_Recall/AR@1: 0.000012
+DetectionBoxes_Recall/AR@10: 0.000912
+DetectionBoxes_Recall/AR@100: 0.004987
+DetectionBoxes_Recall/AR@100 (small): 0.000000
+DetectionBoxes_Recall/AR@100 (medium): 0.001139
+DetectionBoxes_Recall/AR@100 (large): 0.116311
+Loss/localization_loss: 0.759206
+Loss/classification_loss: 0.943312
+Loss/regularization_loss: 2.135895
+Loss/total_loss: 3.838413
+
 This training output is too large.  
 I have reached the storage limit of 3GB.  
 
@@ -201,6 +303,10 @@ I have reached the storage limit of 3GB.
 - pipeline: [pipeline_new.config](/report/experiments3/pipeline_new.config)    
 
 I changed the base model.
+  total_steps: 1400  
+  num_steps: 1400
+
+Since the output was large,the step is reduced.
 
 Result
 ![r_Loss](/report/experiments3/tensorboard/Loss.png)
@@ -210,4 +316,32 @@ Result
 The Loss is not lower than reference.Therefore,learning is not as good as reference.
 
 
-
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.001
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.004
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.091
+Eval metrics at step 1000
+DetectionBoxes_Precision/mAP: 0.000034
+DetectionBoxes_Precision/mAP@.50IOU: 0.000117
+DetectionBoxes_Precision/mAP@.75IOU: 0.000007
+DetectionBoxes_Precision/mAP (small): 0.000000
+DetectionBoxes_Precision/mAP (medium): 0.000000
+DetectionBoxes_Precision/mAP (large): 0.000530
+DetectionBoxes_Recall/AR@1: 0.000000
+DetectionBoxes_Recall/AR@10: 0.000256
+DetectionBoxes_Recall/AR@100: 0.003731
+DetectionBoxes_Recall/AR@100 (small): 0.000000
+DetectionBoxes_Recall/AR@100 (medium): 0.000033
+DetectionBoxes_Recall/AR@100 (large): 0.090854
+Loss/localization_loss: 0.936573
+Loss/classification_loss: 1.078339
+Loss/regularization_loss: 6.681696
+Loss/total_loss: 8.696609
